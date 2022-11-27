@@ -1,0 +1,276 @@
+{
+	"info": {
+		"_postman_id": "b2e24022-8332-4ca5-b2cc-4200fdb081ea",
+		"name": "Test Plato",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json",
+		"_exporter_id": "23477034"
+	},
+	"item": [
+		{
+			"name": "Get Data API",
+			"protocolProfileBehavior": {
+				"disableBodyPruning": true
+			},
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {
+					"mode": "formdata",
+					"formdata": []
+				},
+				"url": {
+					"raw": "https://api.publicapis.org/entries?title=Holiday&description&auth&https&cors&category=",
+					"protocol": "https",
+					"host": [
+						"api",
+						"publicapis",
+						"org"
+					],
+					"path": [
+						"entries"
+					],
+					"query": [
+						{
+							"key": "title",
+							"value": "Holiday",
+							"description": "name of entry (matches via substring\n- i.e. \"at\" would return\n\"cat\" and \"atlas\")\n"
+						},
+						{
+							"key": "description",
+							"value": null
+						},
+						{
+							"key": "auth",
+							"value": null
+						},
+						{
+							"key": "https",
+							"value": null
+						},
+						{
+							"key": "cors",
+							"value": null
+						},
+						{
+							"key": "category",
+							"value": ""
+						}
+					]
+				}
+			},
+			"response": [
+				{
+					"name": "Get Link Holiday",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://api.publicapis.org/entries?title=Holiday",
+							"protocol": "https",
+							"host": [
+								"api",
+								"publicapis",
+								"org"
+							],
+							"path": [
+								"entries"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Holiday",
+									"description": "name of entry (matches via substring\n- i.e. \"at\" would return\n\"cat\" and \"atlas\")\n"
+								},
+								{
+									"key": "description",
+									"value": null,
+									"description": "description of entry (matches via substring)",
+									"disabled": true
+								},
+								{
+									"key": "auth",
+									"value": "",
+									"description": "auth type of entry (can only be values\nmatching in project or\nnull)\n",
+									"disabled": true
+								},
+								{
+									"key": "https",
+									"value": "true",
+									"description": "return entries that support HTTPS or not ",
+									"disabled": true
+								},
+								{
+									"key": "cors",
+									"value": null,
+									"description": "CORS support for entry (\"yes\", \"no\",\nor \"unknown\") ",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "",
+									"description": "return entries of a specific category ",
+									"disabled": true
+								},
+								{
+									"key": "link",
+									"value": "",
+									"disabled": true
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Length",
+							"value": "1213"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 27 Nov 2022 15:47:49 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Caddy"
+						},
+						{
+							"key": "X-Rate-Limit-Duration",
+							"value": "1"
+						},
+						{
+							"key": "X-Rate-Limit-Limit",
+							"value": "10.00"
+						},
+						{
+							"key": "X-Rate-Limit-Request-Forwarded-For",
+							"value": "203.210.84.140"
+						},
+						{
+							"key": "X-Rate-Limit-Request-Remote-Addr",
+							"value": "172.17.0.1:55798"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 5,\n    \"entries\": [\n        {\n            \"API\": \"Abstract Public Holidays\",\n            \"Description\": \"Data on national, regional, and religious holidays via API\",\n            \"Auth\": \"apiKey\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://www.abstractapi.com/holidays-api\",\n            \"Category\": \"Calendar\"\n        },\n        {\n            \"API\": \"Checkiday - National Holiday API\",\n            \"Description\": \"Industry-leading Holiday API. Over 5,000 holidays and thousands of descriptions. Trusted by the World’s leading companies\",\n            \"Auth\": \"apiKey\",\n            \"HTTPS\": true,\n            \"Cors\": \"unknown\",\n            \"Link\": \"https://apilayer.com/marketplace/checkiday-api\",\n            \"Category\": \"Calendar\"\n        },\n        {\n            \"API\": \"Festivo Public Holidays\",\n            \"Description\": \"Fastest and most advanced public holiday and observance service on the market\",\n            \"Auth\": \"apiKey\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://docs.getfestivo.com/docs/products/public-holidays-api/intro\",\n            \"Category\": \"Calendar\"\n        },\n        {\n            \"API\": \"Holidays\",\n            \"Description\": \"Historical data regarding holidays\",\n            \"Auth\": \"apiKey\",\n            \"HTTPS\": true,\n            \"Cors\": \"unknown\",\n            \"Link\": \"https://holidayapi.com/\",\n            \"Category\": \"Calendar\"\n        },\n        {\n            \"API\": \"UK Bank Holidays\",\n            \"Description\": \"Bank holidays in England and Wales, Scotland and Northern Ireland\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"unknown\",\n            \"Link\": \"https://www.gov.uk/bank-holidays.json\",\n            \"Category\": \"Calendar\"\n        }\n    ]\n}"
+				},
+				{
+					"name": "Get Count Animals",
+					"originalRequest": {
+						"method": "GET",
+						"header": [],
+						"body": {
+							"mode": "formdata",
+							"formdata": []
+						},
+						"url": {
+							"raw": "https://api.publicapis.org/entries?category=Animals",
+							"protocol": "https",
+							"host": [
+								"api",
+								"publicapis",
+								"org"
+							],
+							"path": [
+								"entries"
+							],
+							"query": [
+								{
+									"key": "title",
+									"value": "Holiday",
+									"description": "name of entry (matches via substring\n- i.e. \"at\" would return\n\"cat\" and \"atlas\")\n",
+									"disabled": true
+								},
+								{
+									"key": "description",
+									"value": null,
+									"description": "description of entry (matches via substring)",
+									"disabled": true
+								},
+								{
+									"key": "auth",
+									"value": "",
+									"description": "auth type of entry (can only be values\nmatching in project or\nnull)\n",
+									"disabled": true
+								},
+								{
+									"key": "https",
+									"value": "true",
+									"description": "return entries that support HTTPS or not ",
+									"disabled": true
+								},
+								{
+									"key": "cors",
+									"value": null,
+									"description": "CORS support for entry (\"yes\", \"no\",\nor \"unknown\") ",
+									"disabled": true
+								},
+								{
+									"key": "category",
+									"value": "Animals",
+									"description": "return entries of a specific category "
+								}
+							]
+						}
+					},
+					"status": "OK",
+					"code": 200,
+					"_postman_previewlanguage": "json",
+					"header": [
+						{
+							"key": "Access-Control-Allow-Origin",
+							"value": "*"
+						},
+						{
+							"key": "Content-Type",
+							"value": "application/json"
+						},
+						{
+							"key": "Date",
+							"value": "Sun, 27 Nov 2022 15:48:46 GMT"
+						},
+						{
+							"key": "Server",
+							"value": "Caddy"
+						},
+						{
+							"key": "X-Rate-Limit-Duration",
+							"value": "1"
+						},
+						{
+							"key": "X-Rate-Limit-Limit",
+							"value": "10.00"
+						},
+						{
+							"key": "X-Rate-Limit-Request-Forwarded-For",
+							"value": "203.210.84.140"
+						},
+						{
+							"key": "X-Rate-Limit-Request-Remote-Addr",
+							"value": "172.17.0.1:55798"
+						},
+						{
+							"key": "Transfer-Encoding",
+							"value": "chunked"
+						}
+					],
+					"cookie": [],
+					"body": "{\n    \"count\": 27,\n    \"entries\": [\n        {\n            \"API\": \"AdoptAPet\",\n            \"Description\": \"Resource to help get pets adopted\",\n            \"Auth\": \"apiKey\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://www.adoptapet.com/public/apis/pet_list.html\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"Axolotl\",\n            \"Description\": \"Collection of axolotl pictures and facts\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"no\",\n            \"Link\": \"https://theaxolotlapi.netlify.app/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"Cat Facts\",\n            \"Description\": \"Daily cat facts\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"no\",\n            \"Link\": \"https://alexwohlbruck.github.io/cat-facts/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"Cataas\",\n            \"Description\": \"Cat as a service (cats pictures and gifs)\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"no\",\n            \"Link\": \"https://cataas.com/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"Cats\",\n            \"Description\": \"Pictures of cats from Tumblr\",\n            \"Auth\": \"apiKey\",\n            \"HTTPS\": true,\n            \"Cors\": \"no\",\n            \"Link\": \"https://docs.thecatapi.com/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"Dog Facts\",\n            \"Description\": \"Random dog facts\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://dukengn.github.io/Dog-facts-API/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"Dog Facts\",\n            \"Description\": \"Random facts of Dogs\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://kinduff.github.io/dog-api/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"Dogs\",\n            \"Description\": \"Based on the Stanford Dogs Dataset\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://dog.ceo/dog-api/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"eBird\",\n            \"Description\": \"Retrieve recent or notable birding observations within a region\",\n            \"Auth\": \"apiKey\",\n            \"HTTPS\": true,\n            \"Cors\": \"no\",\n            \"Link\": \"https://documenter.getpostman.com/view/664302/S1ENwy59\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"FishWatch\",\n            \"Description\": \"Information and pictures about individual fish species\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://www.fishwatch.gov/developers\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"HTTP Cat\",\n            \"Description\": \"Cat for every HTTP Status\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://http.cat/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"HTTP Dog\",\n            \"Description\": \"Dogs for every HTTP response status code\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://http.dog/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"IUCN\",\n            \"Description\": \"IUCN Red List of Threatened Species\",\n            \"Auth\": \"apiKey\",\n            \"HTTPS\": false,\n            \"Cors\": \"no\",\n            \"Link\": \"http://apiv3.iucnredlist.org/api/v3/docs\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"MeowFacts\",\n            \"Description\": \"Get random cat facts\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"no\",\n            \"Link\": \"https://github.com/wh-iterabb-it/meowfacts\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"Movebank\",\n            \"Description\": \"Movement and Migration data of animals\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://github.com/movebank/movebank-api-doc\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"Petfinder\",\n            \"Description\": \"Petfinder is dedicated to helping pets find homes, another resource to get pets adopted\",\n            \"Auth\": \"apiKey\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://www.petfinder.com/developers/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"PlaceBear\",\n            \"Description\": \"Placeholder bear pictures\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://placebear.com/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"PlaceDog\",\n            \"Description\": \"Placeholder Dog pictures\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://place.dog\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"PlaceKitten\",\n            \"Description\": \"Placeholder Kitten pictures\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://placekitten.com/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"RandomDog\",\n            \"Description\": \"Random pictures of dogs\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://random.dog/woof.json\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"RandomDuck\",\n            \"Description\": \"Random pictures of ducks\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"no\",\n            \"Link\": \"https://random-d.uk/api\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"RandomFox\",\n            \"Description\": \"Random pictures of foxes\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"no\",\n            \"Link\": \"https://randomfox.ca/floof/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"RescueGroups\",\n            \"Description\": \"Adoption\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"unknown\",\n            \"Link\": \"https://userguide.rescuegroups.org/display/APIDG/API+Developers+Guide+Home\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"Shibe.Online\",\n            \"Description\": \"Random pictures of Shiba Inu, cats or birds\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"http://shibe.online/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"The Dog\",\n            \"Description\": \"A public service all about Dogs, free to use when making your fancy new App, Website or Service\",\n            \"Auth\": \"apiKey\",\n            \"HTTPS\": true,\n            \"Cors\": \"no\",\n            \"Link\": \"https://thedogapi.com/\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"xeno-canto\",\n            \"Description\": \"Bird recordings\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"unknown\",\n            \"Link\": \"https://xeno-canto.org/explore/api\",\n            \"Category\": \"Animals\"\n        },\n        {\n            \"API\": \"Zoo Animals\",\n            \"Description\": \"Facts and pictures of zoo animals\",\n            \"Auth\": \"\",\n            \"HTTPS\": true,\n            \"Cors\": \"yes\",\n            \"Link\": \"https://zoo-animal-api.herokuapp.com/\",\n            \"Category\": \"Animals\"\n        }\n    ]\n}"
+				}
+			]
+		}
+	]
+}
